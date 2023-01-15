@@ -5,7 +5,7 @@ import logger from "../../logger"
 class TrueData {
     username: string
     password: string
-    accessToken: string
+    accessToken: string = ""
     baseUrl: string = "https://auth.truedata.in"
     constructor(username: string, password: string) {
         this.username = username
@@ -23,13 +23,13 @@ class TrueData {
         axios(config).then((response: any) => {
             const data = response.data
             this.accessToken = data.access_token
+            console.log(this.accessToken)
             return true
         }).catch((err: any) => {
             logger.error(err)
             return false
         })
     }
-
-
 }
+
 export default TrueData
