@@ -29,5 +29,6 @@ class TrueData {
             return false
         })
     }
+
 }
 export default TrueData
