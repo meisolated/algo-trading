@@ -30,5 +30,6 @@ class TrueData {
         })
     }
 
+
 }
 export default TrueData
